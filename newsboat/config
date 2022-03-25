@@ -1,0 +1,8 @@
+auto-reload yes
+
+reload-threads 100
+
+macro y set browser "mpv %u"; open-in-browser;
+macro d set browser "yt-dlp -f best %u" ; open-in-browser ;
+macro a set browser "yt-dlp -x --audio-format mp3 %u" ; open-in-browser ;
+macro c set browser "echo \"%u\" | wl-copy" ; open-in-browser ;

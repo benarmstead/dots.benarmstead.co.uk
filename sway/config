@@ -1,0 +1,136 @@
+set $mod Mod4
+set $term alacritty
+set $wallpaper ~/Pictures/wallpaper.jpg
+set $highlight #3daee9
+set $prompt #18b218
+set $menu rofi -show run
+
+output HDMI-A-1 pos 0 0 res 2560x1080
+output DP-2 pos 2560 0 res 1600x900
+output eDP-1 disable
+
+exec /home/ben/Scripts/musicMonitor/music_monitor ~/Scripts/musicMonitor/music.csv
+#sudo wg-quick up ~/.config/wireguard/BensLaptop.conf
+
+###############################################################################################
+for_window [title="Tor Browser"] floating enable
+
+exec ~/Scripts/styli.sh/styli.sh -y -s nature
+output * bg $wallpaper fill
+set $lock swaylock -f -i $wallpaper -s fill
+
+bindsym $mod+Return exec $term
+bindsym $mod+q kill
+bindsym $mod+d exec $menu
+bindsym $mod+Shift+c reload
+floating_modifier $mod normal
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+Shift+p exec shutdown now
+bindsym $mod+t exec torbrowser-launcher
+bindsym $mod+Shift+s exec sudo systemctl suspend
+bindsym $mod+n exec $term -e lf
+bindsym $mod+v exec codium
+bindsym $mod+g exec htop
+bindsym $mod+s exec signal-desktop
+
+bindsym $mod+m exec tutanota-desktop
+bindsym $mod+b exec $term -e newsboat
+#bindsym $mod+x exec $term -e /home/ben/Documents/Programming/git/cryptowatch/target/release/cryptowatch XMR/USDT BTC/USDT ETH/USDT
+bindsym $mod+c exec $term -e cmus
+
+bindsym $mod+i exec $term -e nvim ~/.config/sway/config
+bindsym $mod+w exec brave
+
+bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
+
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
+bindsym XF86AudioMute exec amixer set Master 1+ toggle && amixer set Headphone 1+ toggle && amixer set Headphone,1 1+ toggle
+
+bindsym XF86AudioPlay exec cmus-remote -u #playerctl play-pause
+bindsym XF86AudioNext exec cmus-remote -n #playerctl next
+bindsym XF86AudioPrev exec cmus-remote -r #playerctl previous
+bindsym XF86AudioStop exec cmus-remote -s #playerctl stop
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+###############################################################################################
+
+gaps outer 1
+gaps inner 2
+
+input "*" {
+        repeat_delay 250
+        repeat_rate 50
+}
+input * xkb_numlock enable
+
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+#bindsym $mod+Shift+h splith
+#bindsym $mod+Shift+v splitv
+
+bindsym $mod+f fullscreen
+#bindsym $mod+Shift+space focus mode_toggle
+
+mode "resize" {
+bindsym h resize shrink width 10px
+bindsym j resize grow height 10px
+bindsym k resize shrink height 10px
+bindsym l resize grow width 10px
+
+# return to default mode
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+bindsym $mod+r exec ~/Scripts/styli.sh/styli.sh -y -s nature
+
+default_border pixel 3
+default_floating_border pixel
+
+bar {
+     swaybar_command waybar
+}
