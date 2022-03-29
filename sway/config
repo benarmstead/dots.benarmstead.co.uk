@@ -3,7 +3,7 @@ set $term alacritty
 set $wallpaper ~/Pictures/wallpaper.jpg
 set $highlight #3daee9
 set $prompt #18b218
-set $menu rofi -show run
+set $menu dmenu_run
 
 output HDMI-A-1 pos 0 0 res 2560x1080
 output DP-2 pos 2560 0 res 1600x900
