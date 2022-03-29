@@ -10,9 +10,6 @@ username=ben
 cd /tmp/
 
 # Install
-## Install official
-curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
-sudo pacman -S - < packages.txt --noconfirm
 
 ## Install third party
 ### Ungoogled chromium
@@ -22,6 +19,10 @@ echo '
 SigLevel = Required TrustAll
 Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch' | sudo tee --append /etc/pacman.conf
 sudo pacman -Sy
+
+## Install official
+curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
+sudo pacman -S - < packages.txt --noconfirm
 
 ### Yay
 git clone https://aur.archlinux.org/yay-bin.git
