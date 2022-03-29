@@ -101,4 +101,4 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gup="git pull && git add . && git commit -m 'Update' && git push"
-alias ls='exa -lah --group-directories-first --color=always'
+alias ls='exa --icons -taghl --group-directories-first --color=always'
