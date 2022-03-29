@@ -46,8 +46,8 @@ cat codium_extensions.txt | xargs -n 1 codium --install-extension
 ## Dots
 wget -r https://dots.benarmstead.co.uk
 mkdir -p ~/.config
-chmod +x dots/lf/*
-mv dots/* ~/.config/
+chmod +x dots.benarmstead.co.uk/lf/*
+mv dots.benarmstead.co.uk/* ~/.config/
 
 ## Git
 git config --global credential.helper store
