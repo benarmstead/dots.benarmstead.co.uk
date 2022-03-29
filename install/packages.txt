@@ -6,6 +6,7 @@ bitwarden-cli
 bluez
 bluez-utils
 calc
+tree
 cmus
 ctags
 dmenu
