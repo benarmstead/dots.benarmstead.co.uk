@@ -1,7 +1,3 @@
-# Pre-install
-# curl https://dots.benarmstead.co.uk/setup.sh > setup.sh
-# chmod +x setup.sh
-
 # Post-install
 # curl https://dots.benarmstead.co.uk/install.sh > install.sh
 # chmod +x install.sh

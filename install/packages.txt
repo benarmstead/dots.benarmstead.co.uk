@@ -37,7 +37,7 @@ taskell
 torbrowser-launcher
 torsocks
 ueberzug
-ungoogled-chromium
+chromium
 waybar
 wget
 wl-clipboard
