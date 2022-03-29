@@ -75,6 +75,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
 
 ## ZSH
+curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.config/zshrc ~/.
 echo 'alias lf=~/.config/lf/lfub
