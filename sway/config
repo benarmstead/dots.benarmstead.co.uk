@@ -26,6 +26,7 @@ bindsym $mod+Shift+c reload
 floating_modifier $mod normal
 bindsym $mod+Shift+space floating toggle
 
+bindsym $mod+p exec bitwarden-dmenu --dmenu-args='-i' --clear-clipboard 30 --session-timeout 100 --sync-vault-after 3600 --on-error 'xargs notify-send --urgency=low'
 bindsym $mod+Shift+p exec shutdown now
 bindsym $mod+t exec torbrowser-launcher
 bindsym $mod+Shift+s exec sudo systemctl suspend
