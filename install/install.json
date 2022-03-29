@@ -3,9 +3,7 @@
     "bootloader": "grub-install",
     "dry-run": false,
     "gfx_driver": "Intel (open-source)",
-    "harddrives": [
-        "/dev/vda"
-    ],
+    "harddrives": [],
     "hostname": "laptop",
     "kernels": [
         "linux"
