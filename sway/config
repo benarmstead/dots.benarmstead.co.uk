@@ -41,7 +41,7 @@ bindsym $mod+b exec $term -e newsboat
 bindsym $mod+c exec $term -e cmus
 
 bindsym $mod+i exec $term -e nvim ~/.config/sway/config
-bindsym $mod+w exec brave
+bindsym $mod+w exec chromium
 
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
