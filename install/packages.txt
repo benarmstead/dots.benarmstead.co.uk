@@ -33,6 +33,7 @@ slurp
 sshfs
 sway
 otf-font-awesome
+noto-fonts
 swaylock
 sxiv
 taskell

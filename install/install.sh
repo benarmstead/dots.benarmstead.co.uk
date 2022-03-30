@@ -35,7 +35,6 @@ yay -S lf-bin --noconfirm
 yay -S tutanota-desktop-bin --noconfirm
 yay -S vscodium-bin --noconfirm
 yay -S lf-bin --noconfirm
-#yay -S nerd-fonts-complete --noconfirm
 
 ### Codium extensions
 #codium --list-extensions
