@@ -32,6 +32,7 @@ signal-desktop
 slurp
 sshfs
 sway
+otf-font-awesome
 swaylock
 sxiv
 taskell
