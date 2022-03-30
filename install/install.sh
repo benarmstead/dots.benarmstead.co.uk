@@ -73,8 +73,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
 
 ## ZSH
-curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+yay -S --noconfirm zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 mv ~/.config/zshrc ~/.zshrc
 echo 'alias lf=~/.config/lf/lfub
 export EDITOR=nvim' >> ~/.zshrc
