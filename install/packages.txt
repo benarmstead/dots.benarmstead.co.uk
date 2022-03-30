@@ -26,7 +26,6 @@ mpv
 neovim
 newsboat
 npm
-otf-font-awesome
 python-pip
 rustup
 signal-desktop
