@@ -38,6 +38,8 @@ taskell
 torbrowser-launcher
 torsocks
 tree
+udiskie
+udisks2
 ueberzug
 ungoogled-chromium
 waybar
