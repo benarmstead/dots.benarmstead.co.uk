@@ -74,13 +74,13 @@ nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
 ## ZSH
 curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv ~/.config/zshrc ~/.
+mv ~/.config/zshrc ~/.zshrc
 echo 'alias lf=~/.config/lf/lfub
 export EDITOR=nvim' >> ~/.zshrc
 
 ## Sway
 echo 'if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
-fi' >> ~/.profile
+fi' >> ~/.zprofile
 
 #sudo reboot
