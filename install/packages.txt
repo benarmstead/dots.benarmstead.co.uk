@@ -43,7 +43,6 @@ tree
 udiskie
 udisks2
 ueberzug
-ungoogled-chromium
 waybar
 wget
 wl-clipboard
