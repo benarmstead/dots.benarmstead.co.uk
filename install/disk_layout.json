@@ -1,5 +1,5 @@
 {
-    "/dev/sda": {
+    "/dev/nvme0n1": {
         "partitions": [
             {
                 "boot": true,
