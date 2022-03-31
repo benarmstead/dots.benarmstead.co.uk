@@ -77,17 +77,17 @@ rustup default stable
 ## Neovim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
+cd ~/.config/coc/extensions
+npm install
+cd /tmp
 
 ## ZSH
 #yay -S --noconfirm zsh-theme-powerlevel10k-git
 #echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 #sudo chsh -s /bin/zsh
-curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-mv ~/.config/zshrc ~/.zshrc
-echo 'alias lf=~/.config/lf/lfub
-export EDITOR=nvim' >> ~/.zshrc
+curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
+cp ~/.config/zshrc ~/.zshrc
 
 ## Sway
 echo 'if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then

@@ -1,6 +1,8 @@
 alacritty
 android-tools
 aspell
+zsh-syntax-highlighting
+zsh-autosuggestions
 bat
 bitwarden-cli
 blueman
