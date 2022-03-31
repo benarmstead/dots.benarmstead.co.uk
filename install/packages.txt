@@ -18,6 +18,8 @@ git
 gnome-boxes
 grim
 htop
+pulseaudio-alsa
+pulseaudio-bluetooth
 hugo
 hunspell-en_gb
 imagemagick
