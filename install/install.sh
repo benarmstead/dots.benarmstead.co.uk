@@ -7,6 +7,8 @@ git_email=$2
 git_name=$3
 # Hard code username for convenience
 username=ben
+git_email="contact@benarmstead.co.uk"
+git_name="Ben Armstead"
 
 # Go to tmp
 cd /tmp/
