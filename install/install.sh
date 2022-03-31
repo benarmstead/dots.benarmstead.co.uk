@@ -3,6 +3,8 @@
 # chmod +x install.sh
 
 username=$1
+git_email=$2
+git_name=$3
 # Hard code username for convenience
 username=ben
 
@@ -33,7 +35,6 @@ cd ..
 
 ### AUR
 yay -S lf-bin --noconfirm
-yay -S tutanota-desktop-bin --noconfirm
 yay -S vscodium-bin --noconfirm
 yay -S brave-bin --noconfirm
 yay -S lf-bin --noconfirm
@@ -53,6 +54,8 @@ mv dots.benarmstead.co.uk/* ~/.config/
 
 ## Git
 git config --global credential.helper store
+git config --global user.email "$git_email"
+git config --global user.name "$git_name"
 
 ## Sudo
 sudo echo "root ALL=(ALL:ALL) ALL
@@ -74,8 +77,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
 
 ## ZSH
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+#yay -S --noconfirm zsh-theme-powerlevel10k-git
+#echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+#sudo chsh -s /bin/zsh
+curl https://raw.githubusercontent.com/kyoz/purify/master/zsh/purify.zsh-theme --output ~/.oh-my-zsh/themes/purify.zsh-theme
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 mv ~/.config/zshrc ~/.zshrc
 echo 'alias lf=~/.config/lf/lfub
 export EDITOR=nvim' >> ~/.zshrc

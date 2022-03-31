@@ -1,5 +1,6 @@
 set $mod Mod4
 set $term alacritty
+set $browser brave
 set $wallpaper ~/Pictures/wallpaper.jpg
 set $highlight #3daee9
 set $prompt #18b218
@@ -36,13 +37,13 @@ bindsym $mod+v exec codium
 bindsym $mod+g exec htop
 bindsym $mod+s exec signal-desktop
 
-bindsym $mod+m exec tutanota-desktop
+bindsym $mod+m exec $browser https://mail.tutanota.com
 bindsym $mod+b exec $term -e newsboat
 #bindsym $mod+x exec $term -e /home/ben/Documents/Programming/git/cryptowatch/target/release/cryptowatch XMR/USDT BTC/USDT ETH/USDT
 bindsym $mod+c exec $term -e cmus
 
 bindsym $mod+i exec $term -e nvim ~/.config/sway/config
-bindsym $mod+w exec chromium
+bindsym $mod+w exec $browser
 
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
