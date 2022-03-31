@@ -1,5 +1,6 @@
 ZSH_THEME="purify"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git)
+#zsh-autosuggestions zsh-syntax-highlighting
 
 alias gup="git pull && git add . && git commit -m 'Update' && git push"
 alias ls='exa --icons -taghl --group-directories-first --color=always'
