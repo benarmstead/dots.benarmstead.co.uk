@@ -1,8 +1,6 @@
 alacritty
 android-tools
 aspell
-zsh-syntax-highlighting
-zsh-autosuggestions
 bat
 bitwarden-cli
 blueman
@@ -18,8 +16,6 @@ git
 gnome-boxes
 grim
 htop
-pulseaudio-alsa
-pulseaudio-bluetooth
 hugo
 hunspell-en_gb
 imagemagick
@@ -29,15 +25,17 @@ monero-gui
 mpv
 neovim
 newsboat
+noto-fonts
 npm
+otf-font-awesome
+pulseaudio-alsa
+pulseaudio-bluetooth
 python-pip
 rustup
 signal-desktop
 slurp
 sshfs
 sway
-otf-font-awesome
-noto-fonts
 swaylock
 sxiv
 taskell
@@ -47,6 +45,7 @@ tree
 udiskie
 udisks2
 ueberzug
+unzip
 waybar
 wget
 wl-clipboard
@@ -55,3 +54,5 @@ yt-dlp
 zathura
 zathura-pdf-poppler
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
