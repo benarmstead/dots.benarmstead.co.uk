@@ -81,6 +81,9 @@ cd ~/.config/coc/extensions
 npm install
 cd /tmp
 
+# Tor
+sudo systemctl enable tor
+
 ## ZSH
 #yay -S --noconfirm zsh-theme-powerlevel10k-git
 #echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
