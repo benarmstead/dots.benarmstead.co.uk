@@ -1,4 +1,5 @@
 alacritty
+alsa-utils
 android-tools
 aspell
 bat
@@ -20,7 +21,9 @@ hugo
 hunspell-en_gb
 imagemagick
 jdk-openjdk
+kanshi
 libreoffice-fresh
+man-db
 monero-gui
 mpv
 neovim
@@ -28,17 +31,21 @@ newsboat
 noto-fonts
 npm
 otf-font-awesome
+pavucontrol
+powertop
 pulseaudio-alsa
 pulseaudio-bluetooth
 python-pip
 rustup
 signal-desktop
 slurp
+sof-firmware
 sshfs
 sway
 swaylock
 sxiv
 taskell
+tlp
 torbrowser-launcher
 torsocks
 tree

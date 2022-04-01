@@ -1,5 +1,5 @@
-set $mod Mod4
-set $term alacritty
+    set $mod Mod4
+    set $term alacritty
 set $browser brave
 set $wallpaper ~/Pictures/wallpaper.jpg
 set $highlight #3daee9
@@ -8,14 +8,21 @@ set $menu dmenu_run
 
 output HDMI-A-1 pos 0 0 res 2560x1080
 output DP-2 pos 2560 0 res 1600x900
-output eDP-1 disable
+#output eDP-1 disable
+#output eDP-1 scale 1.2
+
 
 exec /home/ben/Scripts/musicMonitor/music_monitor ~/Scripts/musicMonitor/music.csv
 #sudo wg-quick up ~/.config/wireguard/BensLaptop.conf
 
+input * {
+    tap enabled
+}
+
 ###############################################################################################
 for_window [title="Tor Browser"] floating enable
 
+exec_always pkill kanshi; exec kanshi
 exec udiskie &
 exec ~/Scripts/styli.sh/styli.sh -y -s nature
 output * bg $wallpaper fill

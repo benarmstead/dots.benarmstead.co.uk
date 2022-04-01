@@ -97,4 +97,8 @@ echo 'if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi' >> ~/.zprofile
 
+## Power management
+sudo powertop --calibrate
+sudo powertop --auto-tune
+
 #sudo reboot
