@@ -1,14 +1,14 @@
 # Post-install
-# curl https://dots.benarmstead.co.uk/install.sh > install.sh
+# curl https://dots.benarmstead.co.uk/install/install.sh > install.sh
 # chmod +x install.sh
 
 username=$1
 git_email=$2
 git_name=$3
 # Hard code username for convenience
-username=ben
-git_email="contact@benarmstead.co.uk"
-git_name="Ben Armstead"
+#username=ben
+#git_email="contact@benarmstead.co.uk"
+#git_name="Ben Armstead"
 
 # Go to tmp
 cd /tmp/
@@ -58,6 +58,7 @@ mv dots.benarmstead.co.uk/* ~/.config/
 git config --global credential.helper store
 git config --global user.email "$git_email"
 git config --global user.name "$git_name"
+git config --global pull.rebase false
 
 ## Sudo
 sudo echo "root ALL=(ALL:ALL) ALL
