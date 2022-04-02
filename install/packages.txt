@@ -1,4 +1,5 @@
 alacritty
+noto-fonts-emoji
 alsa-utils
 android-tools
 aspell
