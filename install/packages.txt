@@ -15,7 +15,6 @@ dmenu
 exa
 gcc
 git
-gnome-boxes
 grim
 htop
 hugo
