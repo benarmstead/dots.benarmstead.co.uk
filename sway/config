@@ -1,5 +1,5 @@
-    set $mod Mod4
-    set $term alacritty
+set $mod Mod4
+set $term alacritty
 set $browser brave
 set $wallpaper ~/Pictures/wallpaper.jpg
 set $highlight #3daee9
@@ -24,6 +24,7 @@ for_window [title="Tor Browser"] floating enable
 
 exec_always pkill kanshi; exec kanshi
 exec udiskie &
+exec blueman-applet
 exec ~/Scripts/styli.sh/styli.sh -y -s nature
 output * bg $wallpaper fill
 set $lock swaylock -f -i $wallpaper -s fill
@@ -41,7 +42,7 @@ bindsym $mod+t exec torbrowser-launcher
 bindsym $mod+Shift+s exec sudo systemctl suspend
 bindsym $mod+n exec $term -e ~/.config/lf/lfub
 bindsym $mod+v exec codium
-bindsym $mod+g exec htop
+bindsym $mod+g exec $term -e htop
 bindsym $mod+s exec signal-desktop
 
 bindsym $mod+m exec $browser https://mail.tutanota.com
