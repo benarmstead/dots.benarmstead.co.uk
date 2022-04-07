@@ -1,10 +1,8 @@
 alacritty
-oath-toolkit
-backlightctl
-noto-fonts-emoji
 alsa-utils
 android-tools
 aspell
+backlightctl
 bat
 bitwarden-cli
 blueman
@@ -32,8 +30,11 @@ mpv
 neovim
 newsboat
 noto-fonts
+noto-fonts-emoji
 npm
+oath-toolkit
 otf-font-awesome
+pass
 pavucontrol
 powertop
 pulseaudio-alsa
