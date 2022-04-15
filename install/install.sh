@@ -28,6 +28,10 @@ sudo pacman -Sy
 curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
 sudo pacman -S - < packages.txt --noconfirm
 
+### Pip
+pip3 install virtualenv
+pip3 install django
+
 ### Yay
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin

@@ -6,6 +6,9 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=500000
 SAVEHIST=500000
+
+export PATH=/home/ben/.local/bin:$PATH
+
 setopt appendhistory
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
