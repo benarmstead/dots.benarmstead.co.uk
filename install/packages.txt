@@ -7,7 +7,7 @@ aspell
 backlightctl
 bat
 jq
-bitwarden-cli
+bitwarden
 blueman
 ungoogled-chromium
 bluez
