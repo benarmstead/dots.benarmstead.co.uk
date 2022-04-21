@@ -1,10 +1,12 @@
 alacritty
+qpdf
 transmission-gtk
 alsa-utils
 android-tools
 aspell
 backlightctl
 bat
+jq
 bitwarden-cli
 blueman
 ungoogled-chromium
