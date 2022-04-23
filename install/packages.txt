@@ -1,4 +1,6 @@
 alacritty
+pdfgrep
+syncthing
 qpdf
 transmission-gtk
 alsa-utils

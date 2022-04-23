@@ -40,6 +40,7 @@ cd ..
 
 ### AUR
 yay -S lf-bin --noconfirm
+yay -S syncthing-gtk-python3 --noconfirm
 yay -S vscodium-bin --noconfirm
 yay -S lf-bin --noconfirm
 #yay -S brave-bin --noconfirm
