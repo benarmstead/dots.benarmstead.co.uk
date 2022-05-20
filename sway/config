@@ -6,10 +6,13 @@ set $highlight #3daee9
 set $prompt #18b218
 set $menu dmenu_run
 
+font pango:SourceCodePro Medium 25
+
 output HDMI-A-1 pos 0 0 res 2560x1080
 output DP-2 pos 2560 0 res 1600x900
 #output eDP-1 disable
-output eDP-1 scale 1.3
+output eDP-1 scale 1.5
+
 
 
 exec /home/ben/Scripts/musicMonitor/music_monitor ~/Scripts/musicMonitor/music.csv
@@ -36,13 +39,15 @@ bindsym $mod+Shift+c reload
 floating_modifier $mod normal
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+p exec bitwarden-dmenu --dmenu-args='-i' --clear-clipboard 30 --session-timeout 100 --sync-vault-after 3600 --on-error 'xargs notify-send --urgency=low'
+bindsym $mod+p exec bitwarden-desktop
 bindsym $mod+Shift+p exec shutdown now
 bindsym $mod+t exec torbrowser-launcher
 bindsym $mod+Shift+s exec sudo systemctl suspend
-bindsym $mod+n exec $term -e ~/.config/lf/lfub
+bindsym $mod+n exec nautilus
+#$term -e ~/.config/lf/lfub
 bindsym $mod+v exec codium
-bindsym $mod+g exec $term -e htop
+bindsym $mod+g exec gnome-system-monitor
+#bindsym $mod+g exec $term -e htop
 bindsym $mod+s exec signal-desktop
 
 bindsym $mod+m exec $browser https://mail.tutanota.com
