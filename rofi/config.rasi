@@ -1,0 +1,9 @@
+configuration {
+    modi: "window,drun,ssh,file-browser-extended";
+    filebrowser {
+        directory: "/home/ben/";
+        sorting-method: "name"; 
+        directories-first: true;
+    }
+}
+@theme "my_theme"

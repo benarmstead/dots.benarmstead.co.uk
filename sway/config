@@ -1,90 +1,71 @@
 set $mod Mod4
 set $term alacritty
-set $browser chromium
-set $wallpaper ~/Pictures/wallpaper.jpg
-set $highlight #3daee9
 set $prompt #18b218
-set $menu dmenu_run
+set $highlight #3daee9
+set $browser librewolf
+set $lock swaylock -f -i $wallpaper -s fill
+set $wallpaper ~/Pictures/Wallpapers/wallpaper.jpg
+set $menu rofi -show combi -modes combi -combi-modes "window,drun,ssh,file-browser-extended" -icon-theme "Papirus" -show-icons
 
 font pango:SourceCodePro Medium 25
-
-output HDMI-A-1 pos 0 0 res 2560x1080
-output DP-2 pos 2560 0 res 1600x900
-#output eDP-1 disable
-output eDP-1 scale 1.5
-
-
-
-exec /home/ben/Scripts/musicMonitor/music_monitor ~/Scripts/musicMonitor/music.csv
-#sudo wg-quick up ~/.config/wireguard/BensLaptop.conf
-
-input * {
-    tap enabled
-}
-
-###############################################################################################
 for_window [title="Tor Browser"] floating enable
 
-exec_always pkill kanshi; exec kanshi
-exec udiskie &
-exec blueman-applet
-exec ~/Scripts/styli.sh/styli.sh -y -s nature
+#output eDP-1 disable
+output eDP-1 scale 1.5
 output * bg $wallpaper fill
-set $lock swaylock -f -i $wallpaper -s fill
+output DP-2 pos 2560 0 res 1600x900
+output HDMI-A-1 pos 0 0 res 2560x1080
 
-bindsym $mod+Return exec $term
 bindsym $mod+q kill
-bindsym $mod+d exec $menu
 bindsym $mod+Shift+c reload
-floating_modifier $mod normal
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+p exec bitwarden-desktop
+bindsym $mod+d exec $menu
+bindsym $mod+Return exec $term
 bindsym $mod+Shift+p exec shutdown now
-bindsym $mod+t exec torbrowser-launcher
 bindsym $mod+Shift+s exec sudo systemctl suspend
-bindsym $mod+n exec nautilus
-#$term -e ~/.config/lf/lfub
-bindsym $mod+v exec codium
-bindsym $mod+g exec gnome-system-monitor
-#bindsym $mod+g exec $term -e htop
-bindsym $mod+s exec signal-desktop
 
-bindsym $mod+m exec $browser https://mail.tutanota.com
-bindsym $mod+b exec $term -e newsboat
-#bindsym $mod+x exec $term -e /home/ben/Documents/Programming/git/cryptowatch/target/release/cryptowatch XMR/USDT BTC/USDT ETH/USDT
+bindsym $mod+v exec codium
+bindsym $mod+n exec nautilus
+bindsym $mod+w exec $browser
 bindsym $mod+c exec $term -e cmus
+bindsym $mod+g exec $term -e htop
+bindsym $mod+s exec signal-desktop
+bindsym $mod+b exec $term -e newsboat
+bindsym $mod+m exec $browser https://mail.tutanota.com
+bindsym $mod+p exec $browser https://mail.tutanota.com/calendar
 
 bindsym $mod+i exec $term -e nvim ~/.config/sway/config
-bindsym $mod+w exec $browser
-
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
 bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 2%+
 bindsym XF86AudioLowerVolume exec amixer sset 'Master' 2%-
 bindsym XF86AudioMute exec amixer set Master 1+ toggle && amixer set Headphone 1+ toggle && amixer set Headphone,1 1+ toggle
 
-bindsym XF86AudioPlay exec cmus-remote -u #playerctl play-pause
-bindsym XF86AudioNext exec cmus-remote -n #playerctl next
-bindsym XF86AudioPrev exec cmus-remote -r #playerctl previous
-bindsym XF86AudioStop exec cmus-remote -s #playerctl stop
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioStop exec playerctl stop
+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
 ###############################################################################################
 
 gaps outer 1
 gaps inner 2
 
 input "*" {
-        repeat_delay 250
-        repeat_rate 50
-}
-input * xkb_numlock enable
+    repeat_delay 250
+    repeat_rate 50
 
+    xkb_layout "gb"
+    tap enabled
+    xkb_numlock enable
+}
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
-bindsym $mod+k focus up
 bindsym $mod+l exec $lock
 
 bindsym $mod+Shift+h move left
@@ -126,23 +107,18 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-#bindsym $mod+Shift+h splith
-#bindsym $mod+Shift+v splitv
-
 bindsym $mod+f fullscreen
-#bindsym $mod+Shift+space focus mode_toggle
 
 mode "resize" {
-bindsym h resize shrink width 10px
-bindsym j resize grow height 10px
-bindsym k resize shrink height 10px
-bindsym l resize grow width 10px
+    bindsym h resize shrink width 10px
+    bindsym j resize grow height 10px
+    bindsym k resize shrink height 10px
+    bindsym l resize grow width 10px
 
-# return to default mode
-bindsym Return mode "default"
-bindsym Escape mode "default"
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
-bindsym $mod+r exec ~/Scripts/styli.sh/styli.sh -y -s nature
 
 default_border pixel 3
 default_floating_border pixel

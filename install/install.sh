@@ -40,10 +40,8 @@ cd ..
 
 ### AUR
 yay -S lf-bin --noconfirm
-yay -S syncthing-gtk-python3 --noconfirm
 yay -S vscodium-bin --noconfirm
-yay -S lf-bin --noconfirm
-#yay -S brave-bin --noconfirm
+yay -S rofi-file-browser-extended-git --noconfirm
 
 ### Codium extensions
 #codium --list-extensions
