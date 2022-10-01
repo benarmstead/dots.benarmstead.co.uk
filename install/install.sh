@@ -41,6 +41,7 @@ cd ..
 ### AUR
 yay -S lf-bin --noconfirm
 yay -S vscodium-bin --noconfirm
+yay -S nerd-fonts-complete --noconfirm
 yay -S rofi-file-browser-extended-git --noconfirm
 
 ### Codium extensions
@@ -78,14 +79,9 @@ rustup install stable
 rustup default stable
 
 ## Neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim -c 'PlugInstall | PlugUpdate | :q! | :q!'
-cd ~/.config/coc/extensions
-npm install
-cd /tmp
-
-# Tor
-sudo systemctl enable tor
+mv ~/.config/nvim/ ~/.config/nvim-save
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+mv ~/.config/nvim-save ~/.config/nvim
 
 ## ZSH
 #yay -S --noconfirm zsh-theme-powerlevel10k-git
