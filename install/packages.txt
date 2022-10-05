@@ -12,6 +12,8 @@ bluez-utils
 calc
 cmus
 ctags
+docker
+docker-compose
 exa
 feh
 fzf
