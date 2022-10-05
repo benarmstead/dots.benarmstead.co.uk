@@ -5,6 +5,7 @@ aspell
 backlightctl
 bat
 bitwarden
+bitwarden-cli
 blueman
 bluez
 bluez-utils
