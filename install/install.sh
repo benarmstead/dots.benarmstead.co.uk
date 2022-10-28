@@ -15,15 +15,6 @@ cd /tmp/
 
 # Install
 
-## Install third party
-### Ungoogled chromium
-curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/x86_64/home_ungoogled_chromium_Arch.key' | sudo pacman-key -a -
-echo '
-[home_ungoogled_chromium_Arch]
-SigLevel = Required TrustAll
-Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch' | sudo tee --append /etc/pacman.conf
-sudo pacman -Sy
-
 ## Install official
 curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
 sudo pacman -S - < packages.txt --noconfirm
@@ -42,6 +33,7 @@ cd ..
 yay -S lf-bin --noconfirm
 yay -S vscodium-bin --noconfirm
 yay -S nerd-fonts-complete --noconfirm
+yay -S ungoogled-chromium-bin --noconfirm
 
 ### Codium extensions
 #codium --list-extensions
