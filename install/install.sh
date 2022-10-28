@@ -42,7 +42,6 @@ cd ..
 yay -S lf-bin --noconfirm
 yay -S vscodium-bin --noconfirm
 yay -S nerd-fonts-complete --noconfirm
-yay -S rofi-file-browser-extended-git --noconfirm
 
 ### Codium extensions
 #codium --list-extensions
