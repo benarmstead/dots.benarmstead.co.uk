@@ -2,13 +2,13 @@ batisteo.vscode-django
 budparr.language-hugo-vscode
 donjayamanne.githistory
 dsznajder.es7-react-js-snippets
+eamodio.gitlens
 ecmel.vscode-html-css
 esbenp.prettier-vscode
 kamikillerto.vscode-colorize
 ms-python.python
 redhat.java
 redwan-hossain.auto-rename-tag-clone
-sdras.night-owl
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
 vscjava.vscode-java-pack
