@@ -22,3 +22,24 @@ alias lf=~/.config/lf/lfub
 alias grep='grep --color=auto'
 
 export EDITOR=nvim
+
+export ANDROID_HOME="/home/ben/Android/Sdk/"
+alias "sudo"="doas"
+export BW_SESSION="secret_key"
+
+alias "up"="docker compose up web"
+alias "stop"="docker stop $(docker ps -q)" 
+
+alias "mgt"="docker compose exec web python src/manage.py makemigrations && docker compose exec web python src/manage.py migrate"
+alias "fake"="docker compose exec web python src/manage.py migrate --fake"
+alias "super"="docker compose exec web python src/manage.py createsuperuser"
+
+alias "poet"="docker compose exec web poetry install"
+
+alias "sync"="make sync-dev-db && make sync-media"
+
+function push() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
