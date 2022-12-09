@@ -1,97 +1,102 @@
 {
-	"layer": "bottom",
-	"position": "top",
-	"modules-left": [
-		"sway/workspaces",
-		"custom/right-arrow-dark",
-		"custom/rss"
-	],
-	"modules-center": [
-		"custom/clock"
-	],
-	"modules-right": [
-		"pulseaudio",
-		"memory",
-		"cpu",
-		"battery",
-		"disk",
-		"tray"
-	],
-	"custom/rss": {
-		"format": " {}",
-		"interval": 600,
-		"exec": "Scripts/waybar/rss.sh",
-		"on-click": "alacritty -e newsboat",
-		"escape": true
-	},
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-	"custom/clock": {
-		"exec": "date +'%H:%M:%S'",
-		"interval": 1
-	},
-	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
-		"scroll-step": 5,
-		"on-click": "pamixer -t",
-		"on-click-right": "pavucontrol"
-	},
-	"memory": {
-		"interval": 5,
-		"format": " {}%"
-	},
-	"cpu": {
-		"interval": 5,
-		"format": " {usage:2}%"
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"disk": {
-		"interval": 5,
-		"format": " {percentage_used:2}%",
-		"path": "/"
-	},
-	"tray": {
-		"icon-size": 15
-	}
+  "layer": "bottom",
+  "position": "top",
+  "modules-left": [
+    "sway/workspaces",
+    "custom/right-arrow-dark",
+    "custom/rss",
+    "custom/crypto"
+  ],
+  "modules-center": [
+    "custom/clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "battery",
+    "disk",
+    "tray"
+  ],
+  "custom/crypto": {
+    "format": "{}",
+    "interval": 6000,
+    "exec": "python3 ~/Scripts/waybar/crypto.py"
+  },
+  "custom/rss": {
+    "format": " {}",
+    "interval": 2,
+    "exec": "~/Scripts/waybar/rss.sh",
+    "escape": true
+  },
+  "custom/left-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+  "custom/clock": {
+    "exec": "date +'%H:%M:%S'",
+    "interval": 1
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol"
+  },
+  "memory": {
+    "interval": 5,
+    "format": " {}%"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage:2}%"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "disk": {
+    "interval": 5,
+    "format": " {percentage_used:2}%",
+    "path": "/"
+  },
+  "tray": {
+    "icon-size": 15
+  }
 }

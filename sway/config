@@ -29,15 +29,15 @@ bindsym $mod+Return exec $term
 #bindsym $mod+Shift+p exec shutdown now
 bindsym $mod+Shift+s exec sudo systemctl suspend
 
-bindsym $mod+v exec $term -e nvim
+bindsym $mod+v exec code --enable-proposed-api GitHub.vscode-pull-request-github
 bindsym $mod+n exec nautilus
 bindsym $mod+w exec $browser
+bindsym $mod+Shift+w exec $browser --incognito
 bindsym $mod+c exec $term -e cmus
 bindsym $mod+g exec gnome-system-monitor
 bindsym $mod+s exec signal-desktop
 bindsym $mod+b exec $term -e newsboat
-bindsym $mod+m exec $browser https://mail.tutanota.com
-bindsym $mod+p exec $browser https://mail.tutanota.com/calendar
+bindsym $mod+m exec $browser https://gmail.com
 
 bindsym $mod+i exec $term -e nvim ~/.config/sway/config
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
