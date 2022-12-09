@@ -10,8 +10,11 @@ blueman
 bluez
 bluez-utils
 calc
+chromium
 cmus
+code
 ctags
+doas
 docker
 docker-compose
 exa
@@ -61,7 +64,6 @@ transmission-gtk
 tree
 udiskie
 udisks2
-ungoogled-chromium
 unzip
 waybar
 wget
@@ -73,7 +75,3 @@ zathura-pdf-poppler
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-
-ungoogled-chromium-bin
-nerd-fonts-complete
-vscodium-bin

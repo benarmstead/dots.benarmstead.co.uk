@@ -22,19 +22,18 @@ cd ..
 
 ## Install packages
 curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
-yay -S - < packages.txt --noconfirm
+sudo pacman -S - < packages.txt --noconfirm
 
 ### Codium extensions
-#codium --list-extensions
-curl https://dots.benarmstead.co.uk/install/codium_extensions.txt > codium_extensions.txt
-cat codium_extensions.txt | xargs -n 1 codium --install-extension
+#code --list-extensions
+curl https://dots.benarmstead.co.uk/install/code.txt > code.txt
+cat code.txt | xargs -n 1 code --install-extension
 
 
 # Configurations
 ## Dots
 wget -r https://dots.benarmstead.co.uk
 mkdir -p ~/.config
-chmod +x dots.benarmstead.co.uk/lf/*
 mv dots.benarmstead.co.uk/* ~/.config/
 
 ## Git
@@ -55,8 +54,8 @@ sudo systemctl enable bluetooth
 sudo systemctl enable NetworkManager
 
 ## Rust
-rustup install stable
-rustup default stable
+# rustup install stable
+# rustup default stable
 
 ## Neovim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
