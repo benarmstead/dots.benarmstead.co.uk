@@ -1,12 +1,10 @@
-batisteo.vscode-django
-budparr.language-hugo-vscode
 donjayamanne.githistory
-dsznajder.es7-react-js-snippets
 eamodio.gitlens
 ecmel.vscode-html-css
 esbenp.prettier-vscode
-kamikillerto.vscode-colorize
+GitHub.vscode-pull-request-github
 ms-python.python
+naumovs.color-highlight
 redhat.java
 redwan-hossain.auto-rename-tag-clone
 vscjava.vscode-java-debug
@@ -14,4 +12,4 @@ vscjava.vscode-java-dependency
 vscjava.vscode-java-pack
 vscjava.vscode-java-test
 vscjava.vscode-maven
-vscode-icons-team.vscode-icons
+wix.vscode-import-cost
