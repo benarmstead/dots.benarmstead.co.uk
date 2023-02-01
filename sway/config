@@ -2,7 +2,7 @@ set $mod Mod4
 set $term alacritty
 set $prompt #18b218
 set $highlight #3daee9
-set $browser chromium
+set $browser google-chrome-stable
 set $lock swaylock -f -i $wallpaper -s fill
 set $wallpaper ~/Pictures/Wallpapers/wallpaper.jpg
 set $menu rofi -show combi -modes combi -combi-modes "window,drun,ssh,file-browser-extended" -icon-theme "Papirus" -show-icons
@@ -14,7 +14,7 @@ exec source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 exec blueman-applet
 exec nm-applet
 
-#output eDP-1 disable
+# output eDP-1 disable
 #output eDP-1 scale 1.5
 #output * bg $wallpaper fill
 #output DP-2 pos 2560 0 res 1600x900
