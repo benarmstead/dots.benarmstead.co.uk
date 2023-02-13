@@ -22,7 +22,7 @@ cd ..
 
 ## Install packages
 curl https://dots.benarmstead.co.uk/install/packages.txt > packages.txt
-sudo pacman -S - < packages.txt --noconfirm
+yay -S - < packages.txt --noconfirm
 
 ### Codium extensions
 #code --list-extensions
