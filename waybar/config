@@ -4,8 +4,9 @@
   "modules-left": [
     "sway/workspaces",
     "custom/right-arrow-dark",
-    "custom/rss",
-    "custom/crypto"
+    "custom/crypto",
+    "custom/countdown",
+    "custom/feargreed"
   ],
   "modules-center": [
     "custom/clock"
@@ -18,10 +19,15 @@
     "disk",
     "tray"
   ],
-  "custom/crypto": {
+  "custom/countdown": {
     "format": "{}",
-    "interval": 6000,
-    "exec": "python3 ~/Scripts/waybar/crypto.py"
+    "interval": 43200,
+    "exec": "node ~/Scripts/waybar/countdown.js"
+  },
+  "custom/feargreed": {
+    "format": "{}",
+    "interval": 43200,
+    "exec": "python ~/Scripts/waybar/fg.py"
   },
   "custom/rss": {
     "format": " {}",
