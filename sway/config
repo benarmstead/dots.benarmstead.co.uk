@@ -2,7 +2,7 @@ set $mod Mod4
 set $term alacritty
 set $prompt #18b218
 set $highlight #3daee9
-set $browser chromium
+set $browser google-chrome-stable
 set $lock swaylock -f -i $wallpaper -s fill
 set $wallpaper ~/Pictures/Wallpapers/wallpaper.jpg
 set $menu rofi -show combi -modes combi -combi-modes "window,drun,ssh,file-browser-extended" -icon-theme "Papirus" -show-icons
@@ -14,11 +14,12 @@ exec source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 exec blueman-applet
 exec nm-applet
 
-#output eDP-1 disable
-#output eDP-1 scale 1.5
-#output * bg $wallpaper fill
-#output DP-2 pos 2560 0 res 1600x900
-#output HDMI-A-1 pos 0 0 res 2560x1080
+output * bg $wallpaper fill
+exec brightnessctl s 100%
+# output eDP-1 disable
+# output eDP-1 scale 1.5
+# output DP-2 pos 2560 0 res 1600x900
+# output HDMI-A-1 pos 0 0 res 2560x1080
 
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
@@ -29,7 +30,7 @@ bindsym $mod+Return exec $term
 #bindsym $mod+Shift+p exec shutdown now
 bindsym $mod+Shift+s exec sudo systemctl suspend
 
-bindsym $mod+v exec code --enable-proposed-api GitHub.vscode-pull-request-github
+bindsym $mod+v exec codium --enable-proposed-api GitHub.vscode-pull-request-github
 bindsym $mod+n exec nautilus
 bindsym $mod+w exec $browser
 bindsym $mod+Shift+w exec $browser --incognito
@@ -38,6 +39,7 @@ bindsym $mod+g exec gnome-system-monitor
 bindsym $mod+s exec signal-desktop
 bindsym $mod+b exec $term -e newsboat
 bindsym $mod+m exec $browser https://gmail.com
+bindsym $mod+p exec $browser chrome://settings/passwords
 
 bindsym $mod+i exec $term -e nvim ~/.config/sway/config
 bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
@@ -56,8 +58,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 ###############################################################################################
 
-gaps outer 1
-gaps inner 2
+gaps outer 8
+gaps inner 10
 
 input "*" {
     repeat_delay 250
