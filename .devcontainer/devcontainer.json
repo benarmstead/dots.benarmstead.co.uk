@@ -5,46 +5,8 @@
       "terminal.integrated.shell.linux": "/bin/zsh",
       "editor.tabSize": 4,
       "explorer.confirmDelete": false,
-        "git.confirmSync": false,
-        "git.autofetch": true,
-        "workbench.startupEditor": "none",
-        "git.enableSmartCommit": true,
-        "vsicons.dontShowNewVersionMessage": true,
-        "window.zoomLevel": 1,
-        "editor.formatOnSave": true,
-        "explorer.confirmDragAndDrop": false,
-        "python.formatting.provider": "black",
-        "[javascript]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[jsonc]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "java.saveActions.organizeImports": true,
-        "editor.codeActionsOnSave": {
-          "source.fixAll": true,
-          "source.organizeImports": true
-          //"flake8-whole-project": true
-        },
-        "[css]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "javascript.updateImportsOnFileMove.enabled": "always",
-        "[html]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "[json]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "workbench.editorAssociations": {
-          "*.pdf": "default"
-        },
-        "githubPullRequests.pullBranch": "never",
-        "git.ignoreRebaseWarning": true,
-        "[typescriptreact]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        },
-        "update.showReleaseNotes": false
+      "git.confirmSync": false,
+      "git.autofetch": true
     },
     "vscode": {
       "extensions": [
