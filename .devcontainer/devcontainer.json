@@ -1,6 +1,10 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/zsh",
+      "editor.tabSize": 4
+    },
     "vscode": {
       "settings": {
         "explorer.confirmDelete": false,
