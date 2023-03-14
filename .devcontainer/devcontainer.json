@@ -43,7 +43,8 @@
         "[typescriptreact]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
-        "update.showReleaseNotes": false},
+        "update.showReleaseNotes": false
+      },
       "extensions": [
         "donjayamanne.githistory",
         "eamodio.gitlens",
