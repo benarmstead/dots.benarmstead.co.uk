@@ -3,11 +3,8 @@
   "customizations": {
     "settings": {
       "terminal.integrated.shell.linux": "/bin/zsh",
-      "editor.tabSize": 4
-    },
-    "vscode": {
-      "settings": {
-        "explorer.confirmDelete": false,
+      "editor.tabSize": 4,
+      "explorer.confirmDelete": false,
         "git.confirmSync": false,
         "git.autofetch": true,
         "workbench.startupEditor": "none",
@@ -48,7 +45,8 @@
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "update.showReleaseNotes": false
-      },
+    },
+    "vscode": {
       "extensions": [
         "donjayamanne.githistory",
         "eamodio.gitlens",
