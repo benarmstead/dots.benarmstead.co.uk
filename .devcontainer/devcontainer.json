@@ -1,0 +1,16 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "customizations": {
+        "vscode": {
+          "extensions": ["donjayamanne.githistory",
+          "eamodio.gitlens",
+          "ecmel.vscode-html-css",
+          "esbenp.prettier-vscode",
+          "GitHub.vscode-pull-request-github",
+          "ms-python.python",
+          "naumovs.color-highlight",
+          "redwan-hossain.auto-rename-tag-clone"]
+        }
+      },
+    "postCreateCommand": "git submodule update --init"
+  }
