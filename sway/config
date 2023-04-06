@@ -16,7 +16,7 @@ exec nm-applet
 
 output * bg $wallpaper fill
 exec brightnessctl s 100%
-# output eDP-1 disable
+output eDP-1 disable
 # output eDP-1 scale 1.5
 # output DP-2 pos 2560 0 res 1600x900
 # output HDMI-A-1 pos 0 0 res 2560x1080
@@ -34,9 +34,10 @@ bindsym $mod+v exec codium --enable-proposed-api GitHub.vscode-pull-request-gith
 bindsym $mod+n exec nautilus
 bindsym $mod+w exec $browser
 bindsym $mod+Shift+w exec $browser --incognito
-bindsym $mod+c exec $term -e cmus
+bindsym $mod+c exec $term -e ~/Scripts/cmus.sh
 bindsym $mod+g exec gnome-system-monitor
 bindsym $mod+s exec signal-desktop
+bindsym $mod+a exec google-chrome-stable --app-id=hnpfjngllnobngcgfapefoaidbinmjnm
 bindsym $mod+b exec $term -e newsboat
 bindsym $mod+m exec $browser https://gmail.com
 bindsym $mod+p exec $browser chrome://settings/passwords
